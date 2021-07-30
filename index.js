@@ -3,7 +3,7 @@ const celeste = document.getElementById('celeste')
       const naranja = document.getElementById('naranja')
       const verde = document.getElementById('verde')
       const btnEmpezar = document.getElementById('btnEmpezar')
-      const ULTIMO_NIVEL = 5
+      const ULTIMO_NIVEL = 8
      
       class Juego {
         constructor(){
@@ -122,12 +122,12 @@ const celeste = document.getElementById('celeste')
       }
 
       ganoElJuego() {
-        swal('Andi', 'Felicitaciones, ganaste el juego!', 'success')
+        swal('¡Felicitaciones!', 'Ganaste el juego', 'success')
         .then(this.inicializar)
       }
 
       perdioElJuego() {
-        swal('Andi', 'Lo lamentamos, perdiste :(', 'error')
+        swal('¡Ouch!', 'Lo lamentamos, perdiste :(', 'error')
         .then(() => {
           this.eliminarEventosClick()
           this.inicializar()
